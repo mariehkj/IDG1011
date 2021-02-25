@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exercise</title>
+    </head>
+    <body>
+        <form class="contact_form" action="" method="post" name="contact_form">
+            <ul>
+                <li>
+                    <h2>Contact us</h2>
+                    <span class="required_notification">* Denotes Required Field</span>
+                </li>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="erna solbakken" title="At least first and last name, no initials" pattern="(\w{2,})( \w{2,})+" required>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@email.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required>
+                    <span class="form_hint">Proper format "email@email.email"</span>
+                </li>
+                <li>
+                    <label for="website">Website</label>
+                    <input type="url" name="website" id="website" placeholder="https://www.goggel.lmao" pattern="(https?://)([a-zA-Z0-9]([a-zA-ZæøåÆØÅ0-9\-]{0-61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" required>
+                    <span class="form_hint">Proper format "https://www.goggel.lmao"</span>
+                </li>
+                <li>
+                    <label for="bdate">Birthdate</label>
+                    <input type="date" name="bdate" id="bdate" required>
+                </li>
+                <li>
+                    <label for="message">Message:</label>
+                    <textarea minlength="20" maxlength="1024" title="Type between 20 and 1024 chaeacters" name="message" id="message" col="40" row="8" required></textarea>
+                </li>
+                <li>
+                    <button class="reset" type="reset">Reset</button>
+                    <button class="submit" type="submit">Submit form</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3.1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    greaterNumber(3,5);
+    greaterNumber(15,6);
+
+    console.log(hiWorld());
+    console.log(hiWorld("en"));
+    console.log(hiWorld("no"));
+    console.log(hiWorld("zh"));
+
+    console.log("null: " + gradeAssignment());
+    console.log("26%: " + gradeAssignment(26));
+    console.log("65%: " + gradeAssignment(65));
+    console.log("70%: " + gradeAssignment(70));
+    console.log("89%: " + gradeAssignment(89));
+    console.log("98%: " + gradeAssignment(98));
+    console.log("102%: " + gradeAssignment(102));
+
+    var array = ["dog", "cat", "rabbit"];
+    checkIfArray("text");
+    checkIfArray(array);
+
+    /*function greaterNumber(num1, num2){
+        let operator = "";
+        if(num1>num2){operator = ">";}
+        else{operator = "<";}
+        console.log(num1.toString()+operator+num2.toString());
+    }*/
+
+    function greaterNumber(num1, num2){
+        let greater;
+        if(num1>num2){greater = num1;}
+        else{greater = num2;}
+        console.log("The greater number of " + num1.toString() + " and " + num2.toString() + " is " + greater.toString());
+    }
+
+    function hiWorld(language = "en"){
+        switch(language){
+            case "en":
+            return "Hello, World!";
+
+            case "no":
+            return "Hei, Verden!";
+            
+            case "zh":
+            return "你好, 世界!";
+        }
+        /*if(language == "en"){
+            return "Hello, World!";
+        }
+
+        else if(language == "no"){
+            return "Hei, Verden!";
+        }
+
+        else if(language == "zh") {//not 'else', since you could add more languages later. 'zh' is mandarin
+            return "你好, 世界!";
+        }*/
+    }
+
+    function gradeAssignment(score){ //0-100
+        if(score>=90){return "A";}
+        else if(score>=80 && score<90){return "B";}
+        else if(score>=70 && score<80){return "C";}
+        else if(score>=60 && score<70){return "D";}
+        else{return "F";}
+    }
+
+    function checkIfArray(input){
+        if(Array.isArray(input)){console.log(input.join(" "))}
+        else{console.log("input is not an array");}
+    }
+    
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr><th>First name</th><th>Last name</th><th>Email</th></tr>
+    </table>
+</body>
+<script>
+    fetch('./list_of_students.json')
+        .then(respons => respons.json())
+        .then(data => {
+            var studentlist = JSON.stringify(data)
+            for(var i=0; i<JSON.parse(studentlist).length; i++){
+            document.getElementById("table").innerHTML += 
+            "<tr><td>" + JSON.parse(studentlist)[i].firstName +
+            "</td><td>" + JSON.parse(studentlist)[i].lastName +
+            "</td><td>" + JSON.parse(studentlist)[i].email +
+            "</td></tr>";}
+        });
+</script>
+</html>

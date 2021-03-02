@@ -1,0 +1,12 @@
+[
+    {"firstName": "Marie", "lastName": "Kjaer", "email": "marie@email.com"},
+    {"firstName": "Jens", "lastName": "Tassen", "email": "jens-tassen@email.com"},
+    {"firstName": "Comeon", "lastName": "Eileen", "email": "comeoneileen@email.com"},
+    {"firstName": "Professor", "lastName": "Oak", "email": "profoak@email.com"},
+    {"firstName": "Bugcatcher", "lastName": "Joey", "email": "joe23@email.com"},
+    {"firstName": "Ash", "lastName": "Katchum", "email": "ash243@email.com"},
+    {"firstName": "Brun", "lastName": "Saus", "email": "brunsaus@email.com"},
+    {"firstName": "Trond", "lastName": "Viffo", "email": "trondviffo@email.com"},
+    {"firstName": "Geir Aage", "lastName": "Johansen", "email": "geiraage@email.com"},
+    {"firstName": "Water", "lastName": "Bottle", "email": "waterbottle@email.com"}
+]

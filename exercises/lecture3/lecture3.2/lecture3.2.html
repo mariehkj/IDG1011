@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3.1</title>
+</head>
+<body>
+    <input id="input" type="text" placeholder="input"/>
+    <button type="button" onclick="swapCase()">Swap case</button>
+    <p id="txt"></p>
+</body>
+<script>
+    var array = ["Cat", "Dog", "Rabbit", "Pig"];
+    function rndFromArray(){
+        console.log("Random from array: " + array[Math.floor(Math.random()*(array.length))]);
+    }
+    function removeFromArray(){
+        array.splice(3,1); //removes index 3 ('pig')
+    }
+
+    function swapCase(){
+        let input = document.getElementById("input").value || "Basic text";
+        let input_swap = "";
+
+        for(var i = 0; i < (input.length); i++){
+            if(input[i] == input[i].toUpperCase()){input_swap += input[i].toLowerCase();}
+            else{input_swap += input[i].toUpperCase();}
+        }
+
+        document.getElementById("txt").innerHTML = input_swap.toString();
+    }
+
+    console.log(array);
+</script>
+</html>

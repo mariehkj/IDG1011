@@ -1,2 +1,2 @@
-# IDG1011-exercises
-Marie Holme Kjær's excercises for IDG1011
+# IDG1011
+Marie Holme Kjær's excercises, labs and obligs for IDG1011

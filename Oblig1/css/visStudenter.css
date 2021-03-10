@@ -1,0 +1,15 @@
+.studenter {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .studenter .name {
+    display: inline-block;
+    width: 20em;
+  }
+  
+  .studenter .studyprogram {
+    display: inline-block;
+    width: 30em;
+  }

@@ -1,0 +1,32 @@
+body {
+    margin-left: 2em;
+  }
+  
+  label {
+    margin-right: 2em;
+    display: inline-block;
+    width: 18em;
+  }
+  
+  .klasseVelger {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .studenter {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .studenter .name {
+    display: inline-block;
+    width: 20em;
+  }
+  
+  .studenter .studyprogram {
+    display: inline-block;
+    width: 30em;
+  }
+  

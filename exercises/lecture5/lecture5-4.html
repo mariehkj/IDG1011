@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name = "myForm">
+        <input type="text" id="fName" name="FirstName">
+        <input type="text" id="LName" name="LastName">
+        <input type="text" id="age" value="Enter Age">
+        <input type="text" id="num" name="mobile">
+
+        <input type="submit" onclick="validateForm()">
+    </form>
+
+</body>
+<script>
+    function validateForm(){
+        let fName = document.getElementById("fName").value;
+        let lName = document.getElementById("LName").value;
+        let age = document.getElementById("age").value;
+        let mobile = document.getElementById("num").value;
+        alert(mobile.length);
+        //a
+        if(fName == "" || lName == "" || (age == "" || age == "Enter Age") || mobile == ""){
+            alert("Input invalid, empty input field");
+            return;
+        }
+
+        //b
+        if(age<13 || age>85){alert("Age invalid"); return;}
+
+        //c
+        if(mobile.length!=7){alert("Mobile invalid"); return;}
+    }
+</script>
+</html>

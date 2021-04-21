@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Demo
+	</title>
+</head>
+<body>
+
+<h1> My First Calculator </h1>
+
+
+<p> Please enter two integer value</p>
+
+<label>Number 1</label>
+<input type="text" name="number1" id="n1">
+<label>Number 2</label>
+<input type="text" name="number2" id="n2">
+<br><br>
+
+<input onclick="add()" type="button" name="add" value="Add">
+<input onclick="sub()" type="button" name="sub" value="Sub">
+<input onclick="mul()" type="button" name="mul" value="Mul">
+<input onclick="div()" type="button" name="div" value="Div">
+<input onclick="pwr()" type="button" name="pwr" value="Pwr">
+
+<br><br><br>
+<label>Result</label>
+<input type="texgt" name="txt" id="display" value="results">
+
+<script type="text/javascript">
+
+function add() {
+
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 + num2;
+	document.getElementById('display').value = result;
+}
+
+function sub() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 - num2;
+	document.getElementById('display').value = result;
+}
+
+function mul() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 * num2;
+	document.getElementById('display').value = result;
+}
+
+function div() {
+	num1 = parseInt(document.getElementById('n1').value);
+	num2 = parseInt(document.getElementById('n2').value);
+	result = num1 / num2;
+	document.getElementById('display').value = result;
+}
+
+function pwr(){
+	num1 = document.getElementById('n1').value;
+	num2 = document.getElementById('n2').value;
+
+	if((isNaN(num1) || isNaN(num2)) || (num1 == "" || num2 == "")){alert("invalid number"); return;}
+
+	result = Math.pow(num1, num2);
+	document.getElementById('display').value = result;
+}
+
+</script>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Form Validation</title>
+</head>
+
+<body>
+	<h1> Profile </h1>
+
+	Your Name
+	<form name="Login" method="post" action="#" onsubmit="UpdateProfile()">
+		<input type="text" name="fName" id="FN"> <br>
+
+		Age <br>
+		<input type="text" name="ageField" id="age"> <br>
+
+		Email <br>
+		<input type="text" name="email" id="e"><br>
+
+		Number <br>
+		<input type="tet " name="number" id="num">
+
+
+		<input type="submit" name="sub" value="Update">
+	</form>
+
+	<script src="classes.js"></script>
+	<script type="text/javascript">
+		window.onload = displayProfile();
+
+		var fn;
+		var a;
+		var em;
+		var tlf;
+
+		function validateForm() {
+			fn = document.forms['Login']['fName'].value;
+			if(fn==null || fn=="")
+			{
+				alert("Please enter your name");
+				document.getElementById('FN').focus();
+				return false;
+			}
+			else if(fn.length<3){
+				alert("Name should be longer than 3 letters");
+				return false;
+			}
+
+			a = document.forms['Login']['ageField'].value;
+			if(a==null || a=="")
+			{
+				alert("Age can not be empty");
+				document.getElementById('age').focus();
+				return false;
+			}
+			else if(parseInt(a)<12 || parseInt(a) > 95)
+			{
+				alert("Age should be between 12 and 95");
+				return false;
+			}
+
+
+	//https://www.udemy.com/blog/javascript-validation-2/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_88010211481_._ad_398022934994_._kw__._de_c_._dm__._pl__._ti_dsa-406594358574_._li_1010781_._pd__._&matchtype=b&gclid=EAIaIQobChMI5p7VzI7V6AIVDImyCh31oAylEAAYASAAEgK9IfD_BwE
+			
+			em = document.forms['Login']['email'].value; 
+			var atpos=em.indexOf("@");
+			// Create a variable to return the numerical value of .
+			// within the variable
+			var dotpos=em.lastIndexOf(".");
+			// Compare the numerical values
+			var adress = em.slice(atpos+1);
+			if(em==null || em==""){
+				alert("Email can not be empty");
+				return false;
+			}
+			else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=em.length){
+				alert("Not a valid e-mail address");
+				return false;
+			}
+			else if(!(adress === "ntnu.no" || adress === "stud.ntnu.no")){
+				alert("Invalid email adress");
+				return false;
+			}
+			
+
+
+			tlf = document.forms['Login']['number'].value;
+			if(tlf==null || tlf==""){
+				alert("Number can not be empty");
+				return false;
+			}
+			else if(tlf.length>7){
+				alert("Number can't be more than 7 digits");
+				return false;
+			}			
+			
+		}
+
+		function UpdateProfile(){
+			if(validateForm() !== false){
+				let myProfile = new Profile();
+				myProfile.setProfile(fn, a, em, tlf);
+			}
+		}
+
+		function displayProfile(){
+			let gatherProfile = new Profile();
+			gatherProfile.getProfile();
+		}
+		
+	</script>
+</body>
+</html>
